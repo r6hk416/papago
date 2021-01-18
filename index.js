@@ -37,7 +37,7 @@ client.on("message", (message) => {
   }
 
   if (message.content == ".Kim서버정보") {
-    let img = "https://cdn.discordapp.com/icons/419671192857739264/6dccc22df4cb0051b50548627f36c09b.webp?size=256"
+    let img = "https://cdn.discordapp.com/attachments/797054999401725962/800629175324639252/papago.gif"
     let embed = new Discord.MessageEmbed()
       .setTitle("정보")
       .setURL("http://www.naver.com")
@@ -49,7 +49,7 @@ client.on("message", (message) => {
       .addField("서버규착", "https://discord.com/channels/800607585849311242/800618651698593843/800618673768628255", true)
       .addField("기타사항", "신생서버입니다\n콜오브듀티 워존합니다\n\n")
       .setTimestamp()
-      .setFooter("", img)
+      .setFooter("제작자R6_HK416", img)
 
     message.channel.send(embed)
   } else if (message.content == "!help") {
