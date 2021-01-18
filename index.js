@@ -36,48 +36,18 @@ client.on("message", (message) => {
     return message.reply("pong")
   }
 
-  if (message.content == "!sp109201") {
-    let embed = new Discord.MessageEmbed()
-    let img = ""
-    var duration = moment.duration(client.uptime).format(" D [일], H [시간], m [분], s [초]")
-    embed.setColor("#186de6")
-    embed.setAuthor("서버 info of 파파고 BOT", img)
-    embed.setFooter(`파파고 BOT ❤️`)
-    embed.addField("RAM usage", `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB`, true)
-    embed.addField("running time", `${duration}`, true)
-    embed.addField("user", `${client.users.cache.size}`, true)
-    embed.addField("server", `${client.guilds.cache.size}`, true)
-    // embed.addField('channel',      `${client.channels.cache.size.toLocaleString()}`, true)
-    embed.addField("Discord.js", `v${Discord.version}`, true)
-    embed.addField("Node", `${process.version}`, true)
-
-    let arr = client.guilds.cache.array()
-    let list = ""
-    list = `\`\`\`css\n`
-
-    for (let i = 0; i < arr.length; i++) {
-      // list += `${arr[i].name} - ${arr[i].id}\n`
-      list += `${arr[i].name}\n`
-    }
-    list += `\`\`\`\n`
-    embed.addField("list:", `${list}`)
-
-    embed.setTimestamp()
-    message.channel.send(embed)
-  }
-
-  if (message.content == "embed") {
+  if (message.content == ".Kim서버정보") {
     let img = "https://cdn.discordapp.com/icons/419671192857739264/6dccc22df4cb0051b50548627f36c09b.webp?size=256"
     let embed = new Discord.MessageEmbed()
-      .setTitle("")
+      .setTitle("정보")
       .setURL("http://www.naver.com")
-      .setAuthor("", img, "http://www.naver.com")
+      .setAuthor("디스코드", img, "http://www.naver.com")
       .setThumbnail(img)
-      .addField("Inline field title", "Some value here")
-      .addField("Inline field title", "Some value here", true)
-      .addField("Inline field title", "Some value here", true)
-      .addField("Inline field title", "Some value here", true)
-      .addField("Inline field title", "Some value here1\nSome value here2\nSome value here3\n")
+      .addField("개설일", "2021년1월18일")
+      .addField("분류", "게임", true)
+      .addField("구체적분류", "콜오브듀티", true)
+      .addField("서버규착", "https://discord.com/channels/800607585849311242/800618651698593843/800618673768628255", true)
+      .addField("기타사항", "신생서버입니다\n콜오브듀티 워존합니다\n\n")
       .setTimestamp()
       .setFooter("", img)
 
