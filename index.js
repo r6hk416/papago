@@ -46,13 +46,24 @@ client.on("message", (message) => {
       .addField("개설일", "2021년1월18일")
       .addField("분류", "게임", true)
       .addField("구체적분류", "콜오브듀티", true)
-      .addField("서버규착", "https://discord.com/channels/800607585849311242/800618651698593843/800618673768628255", true)
+      .addField("서버규칙", "https://discord.com/channels/800607585849311242/800618651698593843/800618673768628255", true)
       .addField("기타사항", "신생서버입니다\n콜오브듀티 워존합니다\n\n")
       .setTimestamp()
       .setFooter("제작자R6_HK416", img)
 
     message.channel.send(embed)
-  } else if (message.content == "!help") {
+  } 
+  
+  if (message.content == "!제작자모드") {
+    let img = "https://cdn.discordapp.com/attachments/756326812841279572/800646741099020328/giphy.gif"
+    let embed = new Discord.MessageEmbed()
+    .setTitle("제작자")
+    .addField(img)
+    .addField("제작자모드", "승인완료")
+    message.channel.send(embed)
+  }
+  
+  else if (message.content == "Kim도움말") {
     let helpImg = "https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png"
     let commandList = [
       { name: "kim도움말", desc: "명령어 표시" },
